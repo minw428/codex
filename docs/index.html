@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#10283a">
+<meta name="description" content="2026년 11월 25일~12월 2일 도쿄·교토·오사카 가족여행 일정표">
+<link rel="manifest" href="./manifest.webmanifest">
+<link rel="icon" type="image/svg+xml" href="./icon.svg">
+<link rel="apple-touch-icon" href="./icon-192.png">
+<title>일본 가족여행 2026 · 일정표</title>
+<style>
+:root{--ink:#10283a;--muted:#627484;--line:#dfe7ec;--bg:#f6f7f4;--paper:#fff;--tokyo:#147b89;--kyoto:#bc6843;--osaka:#805676;--shadow:0 10px 30px rgba(16,40,58,.075)}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Malgun Gothic","Noto Sans CJK KR",sans-serif;line-height:1.56}
+button,a{font:inherit}button{cursor:pointer}a{color:#11677e;text-underline-offset:3px}button:focus-visible,a:focus-visible{outline:3px solid #f0a542;outline-offset:3px}
+.wrap{max-width:780px;margin:auto;padding:0 18px}.mast{background:var(--ink);color:white;padding:26px 0 25px}.eyebrow{font-size:.8rem;letter-spacing:.1em;opacity:.72;font-weight:800}.mast h1{font-size:clamp(1.65rem,6vw,2.35rem);line-height:1.2;margin:7px 0}.mast p{margin:0;color:#d5e4eb;font-size:.92rem}.flightbar{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:20px}.flight{background:#ffffff12;border:1px solid #ffffff2a;border-radius:12px;padding:12px}.flight strong{display:block;font-size:.9rem}.flight span{display:block;color:#dbe8ee;font-size:.76rem;margin-top:4px}.sticky{position:sticky;top:0;z-index:10;background:#f6f7f4eb;backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}.dates{display:flex;gap:8px;overflow-x:auto;padding:11px 18px;max-width:780px;margin:auto;scrollbar-width:none}.dates::-webkit-scrollbar{display:none}.dates button{white-space:nowrap;border:1px solid var(--line);background:white;color:var(--ink);border-radius:999px;padding:8px 13px;font-size:.9rem;font-weight:750}.dates button[aria-current=true]{background:var(--ink);color:white;border-color:var(--ink)}
+main{padding-top:20px;padding-bottom:110px}.panel{background:var(--paper);border:1px solid var(--line);border-radius:18px;box-shadow:var(--shadow);margin-bottom:15px;overflow:hidden}.panelpad{padding:18px}.dayhead{padding:20px;border-top:5px solid var(--accent)}.dayhead .city{font-size:.78rem;font-weight:850;letter-spacing:.1em;color:var(--accent)}.dayhead h2{margin:4px 0 5px;font-size:1.55rem}.dayhead p{margin:0;color:var(--muted);font-size:.92rem}.badges{display:flex;flex-wrap:wrap;gap:6px;margin-top:12px}.badge{font-size:.73rem;font-weight:800;border-radius:999px;padding:4px 9px;background:#e8f3f4;color:#115e69}.badge.option{background:#f3ece7;color:#946044}.badge.hotel{background:#efe9f0;color:#72506d}
+h3{font-size:1.1rem;margin:0 0 12px}.hint{font-size:.78rem;color:var(--muted);margin:0 0 12px}.timeline{position:relative;padding-left:8px}.event{display:grid;grid-template-columns:56px 1fr;gap:12px;position:relative;padding:0 0 17px}.event:last-child{padding-bottom:0}.event time{font-size:.82rem;font-weight:850;color:var(--accent);padding-top:2px}.eventbody{border-left:2px solid var(--line);padding:0 0 0 14px;min-height:34px;position:relative}.eventbody:before{content:"";width:9px;height:9px;position:absolute;left:-5.5px;top:6px;background:var(--accent);border:2px solid white;border-radius:50%;box-shadow:0 0 0 1px var(--accent)}.eventbody strong{display:block;font-size:.94rem}.eventbody small{display:block;color:var(--muted);font-size:.79rem;margin-top:2px}.eventbody.option strong{color:#906247}.eventbody a{font-size:.76rem;margin-top:4px;display:inline-block}.mini{display:flex;gap:8px;flex-wrap:wrap}.pill{display:inline-block;border:1px solid #cbd8df;background:white;padding:7px 10px;border-radius:8px;text-decoration:none;font-size:.8rem;font-weight:800}.pill:hover{background:#f1f7f8}
+details{border:1px solid var(--line);border-radius:12px;margin:9px 0;background:#fff}summary{padding:12px 14px;font-weight:800;cursor:pointer}details p,details ol{font-size:.86rem;color:#314757;margin:0;padding:0 14px 14px 32px}details li{margin:5px 0}
+.meal{margin:12px 0 19px}.meal h4{font-size:.98rem;margin:0 0 8px}.foodgrid{display:grid;gap:10px}.food{display:grid;grid-template-columns:95px 1fr;background:#fbfcfc;border:1px solid var(--line);border-radius:12px;overflow:hidden}.foodmedia{min-height:118px;background:linear-gradient(145deg,#dce8e3,#e8d7cc);position:relative}.foodmedia img{width:100%;height:100%;object-fit:cover;position:absolute;inset:0}.foodmedia .fallback{display:grid;place-items:center;height:100%;font-size:2rem}.foodbody{padding:10px}.foodbody strong{display:block;font-size:.9rem;line-height:1.35}.jp{display:block;color:var(--muted);font-size:.75rem}.foodbody .meta{display:block;font-size:.77rem;margin-top:5px}.foodbody .notes{display:block;color:#7a6259;font-size:.72rem;margin-top:4px}.foodlinks{display:flex;gap:9px;margin-top:8px;font-size:.75rem;font-weight:800}.credit{font-size:.66rem;color:var(--muted);line-height:1.35;margin-top:6px}.credit a{color:inherit}.note{background:#fff9ea;border:1px solid #efdbac;border-radius:12px;padding:12px;font-size:.83rem;color:#5a4a2c}.stay{font-size:.95rem;font-weight:800;margin:0 0 7px}.muted{color:var(--muted);font-size:.81rem}.check{display:flex;gap:10px;align-items:flex-start;padding:10px 0;border-bottom:1px solid var(--line)}.check:last-child{border:0}.check input{accent-color:var(--tokyo);width:18px;height:18px;margin-top:3px}.check label{font-size:.9rem}.check small{display:block;color:var(--muted)}.status{display:block;font-size:.75rem;color:var(--muted);margin-top:12px}.bottom{position:fixed;bottom:0;left:0;right:0;z-index:20;background:#fff;border-top:1px solid var(--line);padding-bottom:env(safe-area-inset-bottom);box-shadow:0 -8px 25px rgba(16,40,58,.08)}.bottom .items{max-width:780px;margin:auto;display:grid;grid-template-columns:repeat(5,1fr)}.bottom button{border:0;background:none;color:#6f8290;padding:10px 2px 8px;font-size:.7rem;font-weight:800}.bottom button[aria-current=true]{color:var(--ink)}.bottom b{display:block;font-size:1.18rem;line-height:1.2}.view{display:none}.view.active{display:block}.pagefoot{font-size:.75rem;color:var(--muted);padding:8px 2px 22px}.install{margin-top:10px;border:1px solid #8db8be;background:#e8f3f4;color:#115e69;border-radius:9px;padding:8px 12px;font-weight:800}
+@media(min-width:600px){.foodgrid{grid-template-columns:1fr 1fr}.food{grid-template-columns:104px 1fr}.panelpad{padding:23px}.event{grid-template-columns:72px 1fr}.flightbar{max-width:640px}.dates{padding-left:18px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<header class="mast"><div class="wrap"><div class="eyebrow">2026 · FAMILY TRIP</div><h1>일본 가족여행</h1><p>11월 25일–12월 2일 · 도쿄 → 교토 → 오사카 · 3인 가족</p><div class="flightbar"><div class="flight"><strong>가는 편 · WE0501</strong><span>11/25 인천 T1 09:50 → 나리타 T2 12:05</span></div><div class="flight"><strong>오는 편 · WE0512</strong><span>12/2 간사이 T1 11:45 → 인천 T1 13:45</span></div></div><button id="install" class="install" hidden>홈 화면에 설치</button><span class="status">iPhone은 Safari 공유 메뉴에서 ‘홈 화면에 추가’를 선택하세요.</span></div></header>
+<div class="sticky"><nav class="dates" id="dates" aria-label="날짜 선택"></nav></div>
+<main class="wrap">
+<section id="schedule" class="view active" aria-label="일정"></section>
+<section id="foodview" class="view" aria-label="식당"></section>
+<section id="transitview" class="view" aria-label="교통"></section>
+<section id="hotelsview" class="view" aria-label="숙소"></section>
+<section id="checkview" class="view" aria-label="준비할 일"></section>
+<div class="pagefoot">시간은 현장 상황에 따라 바뀔 수 있는 계획입니다. 열차 번호·좌석·영업시간은 예약 또는 출발 전 다시 확인하세요. 가격은 주류를 제외한 1인 예상 범위입니다. 인터넷이 없어도 일정·교통·숙소·준비 목록은 볼 수 있지만 식당 참고 사진과 외부 지도는 연결이 필요합니다.</div>
+</main>
+<nav class="bottom" aria-label="화면 메뉴"><div class="items">
+<button data-view="schedule" aria-current="true"><b>◷</b>일정</button><button data-view="foodview"><b>☷</b>식당</button><button data-view="transitview"><b>⇄</b>교통</button><button data-view="hotelsview"><b>⌂</b>숙소</button><button data-view="checkview"><b>☑</b>준비</button>
+</div></nav>
+<script>
+'use strict';
+const photo={
+ tonkatsu:{file:'Original_Tonkatsu.jpg',author:'Kgw1226'},
+ ramen:{file:'Tonkotsu_ramen.jpg',author:'RightCowLeftCoast'},
+ sushi:{file:'Sushi_platter,_Nikko,_Japan.jpg',author:'Joli Rumi'},
+ udon:{file:'Udon_(Kitsune_udon).jpg',author:'MemColorLab'},
+ okonomiyaki:{file:'Okonomiyaki.jpeg',author:'Macgills2'},
+ sukiyaki:{file:'Sukiyaki.JPG',author:'Ernst Schnell'}
+};
+const R={
+ suzuki:['돈카츠 스즈키','とんかつ 寿々木','돈카츠 정식','¥2,000–3,000','3.53 / 859명','https://tabelog.com/tokyo/A1302/A130201/13155684/','tonkatsu','도쿄역 야에스'],
+ rokurin:['로쿠린샤','六厘舎','츠케멘','¥1,200–2,000','3.77 / 7,820명','https://tabelog.com/tokyo/A1302/A130201/13093047/','ramen','생선·돼지 육수'],
+ ikaruga:['도쿄역 이카루가','東京駅 斑鳩','라멘','¥1,200–2,000','3.63 / 3,277명','https://tabelog.com/tokyo/A1302/A130201/13124609/','ramen','도쿄역 라멘스트리트'],
+ kaneko:['가네코한노스케 니혼바시 본점','日本橋 天丼 金子半之助 本店','튀김덮밥','¥1,600–2,500','3.52 / 3,700명 이상','https://tabelog.com/tokyo/A1302/A130202/13118694/','', '해산물 튀김 포함'],
+ hanamaru:['네무로 하나마루 KITTE 마루노우치','根室花まる KITTE丸の内店','스시·단품 주문','¥3,000–5,000','3.54 / 1,729명','https://tabelog.com/tokyo/A1302/A130201/13153777/','sushi','긴 대기 가능'],
+ imahan:['아사쿠사 이마한 국제거리 본점','浅草今半 国際通り本店','소고기·스키야키','점심 ¥4,000–8,000 / 저녁 ¥10,000–20,000','3.62 / 784명','https://tabelog.com/tokyo/A1311/A131102/13003649/','sukiyaki','예약 권장'],
+ grill:['그릴 그랜드','グリル グランド','오므라이스·양식','점심 ¥3,000–4,500 / 저녁 ¥6,000–15,000','3.70 / 930명','https://tabelog.com/tokyo/A1311/A131102/13008702/','','점심 마지막 주문 빠름'],
+ kibun:['기분즈시','紀文寿司','스시','¥8,000–10,000','3.68 / 428명','https://tabelog.com/tokyo/A1311/A131102/13016811/','sushi','예약 시 단품 주문 확인'],
+ urin:['우린보','うりんぼ','돈코츠 라멘','¥1,000–1,500','3.55 / 475명','https://tabelog.com/tokyo/A1311/A131102/13008579/','ramen','저녁 영업 시간 확인'],
+ umikaze:['우미카제 아사쿠사','貝出汁らぁ麺 海美風 浅草店','조개 육수 라멘','¥1,000–2,000','3.52 / 345명','https://tabelog.com/tokyo/A1311/A131102/13257871/','ramen','조개 원물 토핑 확인'],
+ tonkatsujp:['돈카츠닷제이피 오모테산도','tonkatsu.jp 表参道','브랜드 돈카츠','¥3,000–5,000','3.70 / 983명','https://tabelog.com/tokyo/A1306/A130602/13264557/','tonkatsu','오모테산도'],
+ junchan:['돈카츠 준짱','とんかつ じゅんちゃん','돈카츠','¥3,500–5,000','3.56 / 419명','https://tabelog.com/tokyo/A1306/A130603/13300422/','tonkatsu','점심 전용·서비스료 고려'],
+ menchira:['멘치라시','麺散','우동·튀김','¥1,500–2,500','3.58 / 1,471명','https://tabelog.com/tokyo/A1306/A130601/13225567/','udon','하라주쿠'],
+ burger:['더 그레이트 버거','THE GREAT BURGER','수제버거','¥2,000–3,000','3.66 / 3,241명','https://tabelog.com/tokyo/A1306/A130601/13042654/','','하라주쿠'],
+ chao:['차오밤부','チャオバンブー','태국식 볶음밥·면','¥1,500–2,500','3.54 / 1,360명','https://tabelog.com/tokyo/A1306/A130602/13009408/','','매운맛·새우 확인'],
+ kuroda:['야키니쿠 구로다','焼肉 黒田','소고기 구이','¥8,000–12,000','3.52 / 727명','https://tabelog.com/tokyo/A1303/A130301/13235527/','','시부야·신센'],
+ ino:['멘야 이노이치','麺屋 猪一','생선 육수 라멘','¥1,500–2,500','3.71 / 1,133명','https://tabelog.com/kyoto/A2601/A260201/26032368/','ramen','대기·점심 마감 확인'],
+ omen:['오멘 닛폰 시조폰토초','おめんNIPPON 四条先斗町店','야채 우동','¥2,000–3,000','3.54 / 452명','https://tabelog.com/kyoto/A2601/A260201/26001805/','udon','점심 마지막 주문 15:00 기준'],
+ hafuu:['하후 본점','はふう 本店','비프커틀릿·스테이크','점심 ¥3,000–6,000 / 저녁 ¥10,000–15,000','3.65 / 768명','https://tabelog.com/kyoto/A2601/A260202/26000943','','기온에서 택시 이동 필요'],
+ roku:['기온 로쿠로쿠','祇園 鹿六','야키니쿠','¥12,000–20,000','3.66 / 227명','https://tabelog.com/kyoto/A2601/A260301/26002425/','','월요일 휴무'],
+ izuu:['이즈우','いづう','교토식 봉초밥','¥3,000–5,000','3.69 / 1,174명','https://tabelog.com/kyoto/A2601/A260301/26000585/','sushi','고등어·상자초밥 중심. 연어 니기리 아님'],
+ yoshimura:['아라시야마 요시무라','嵐山よしむら','소바·튀김','¥2,000–3,500','3.50 / 1,039명','https://tabelog.com/kyoto/A2601/A260403/26000403/','','예약 불가'],
+ hirokawa:['우나기야 히로카와','うなぎ屋 廣川','장어덮밥','¥6,000–8,000','3.72 / 876명','https://tabelog.com/kyoto/A2601/A260403/26000921/','','완전 예약제'],
+ shoraian:['쇼라이안','松籟庵','두부 중심 코스','¥5,500–7,000','3.60 / 359명','https://tabelog.com/kyoto/A2601/A260403/26003826/','','예약·식사 시간 확보'],
+ saganoyu:['사가노유','嵯峨野湯','파스타·카페 식사','¥1,500–3,000','3.56 / 606명','https://tabelog.com/kyoto/A2601/A260403/26005250/','','비 오는 날 휴식 겸 식사'],
+ yamamoto:['야마모토 킷사','やまもと喫茶','달걀 샌드위치·커피','¥1,000–1,500','3.52 / 247명','https://tabelog.com/kyoto/A2601/A260201/26018288/','','숙소에서 도보 약 10–15분'],
+ smart:['스마트 커피','スマート珈琲店','프렌치토스트·카페 양식','¥1,200–2,000','3.71 / 1,798명','https://tabelog.com/kyoto/A2601/A260201/26000647/','','아침·점심 대안'],
+ inoda:['이노다 커피 본점','イノダコーヒ 本店','토스트·아침 세트','¥1,500–2,500','3.54 / 2,232명','https://tabelog.com/kyoto/A2601/A260202/26000412/','','숙소에서 도보 약 20–25분'],
+ petit:['르 프티 멕 오이케','ル・プチメック 御池店','빵·샌드위치','¥800–1,500','3.55 / 954명','https://tabelog.com/kyoto/A2601/A260202/26005029/','','09시 개점·포장 적합'],
+ walden:['월든 우즈 교토','Walden Woods Kyoto','가벼운 아침·커피','¥1,000–1,800','3.58 / 431명','https://tabelog.com/kyoto/A2601/A260101/26030010/','','숙소에서 다소 멂'],
+ ajinoya:['아지노야 본점','味乃家 本店','오코노미야키·야키소바','¥2,000–4,000','3.59 / 1,781명','https://tabelog.com/osaka/A2702/A270202/27001439/','okonomiyaki','월요일 휴무'],
+ mizuno:['미즈노','美津の','오코노미야키','¥2,000–4,000','3.56 / 1,744명','https://tabelog.com/osaka/A2701/A270202/27001278/','okonomiyaki','해산물 혼합 구성 확인'],
+ fukutaro:['후쿠타로 본점','福太郎 本店','네기야키·오코노미야키','¥2,000–4,000','3.71 / 2,773명','https://tabelog.com/osaka/A2701/A270202/27002665/','okonomiyaki','평일 저녁만'],
+ ippo:['잇포테이 본점','一芳亭 本店','슈마이·중화 정식','¥1,200–2,500','3.67 / 2,515명','https://tabelog.com/osaka/A2701/A270202/27001213/','','새우 포함 여부 확인'],
+ joroku:['멘야 조로쿠 난바','麺屋 丈六 なんば店','간장 라멘','¥1,000–1,600','3.73 / 2,654명','https://tabelog.com/osaka/A2701/A270202/27084754/','ramen','점심·저녁 사이 휴식시간'],
+ imai:['도톤보리 이마이 본점','道頓堀 今井 本店','유부우동·닭고기달걀덮밥','¥1,200–2,500','3.58 / 2,393명','https://tabelog.com/osaka/A2702/A270202/27001289/','udon','수요일 휴무'],
+ hide:['스시 히데조','鮨 ひでぞう','스시·단품 주문','¥6,000–8,000','3.63 / 431명','https://tabelog.com/osaka/A2701/A270202/27094403/','sushi','예약 시 16세 동반·단품 주문 확인']
+};
+const meals={
+ '2026-11-25':[['늦은 점심',['suzuki','rokurin','ikaruga','kaneko','hanamaru']],['저녁',['kaneko','suzuki','rokurin','ikaruga','hanamaru']]],
+ '2026-11-26':[['점심',['imahan','grill','urin','umikaze','kibun']],['저녁',['grill','imahan','urin','umikaze','kibun']]],
+ '2026-11-27':[['점심',['tonkatsujp','junchan','menchira','burger','chao']],['저녁',['kuroda','menchira','burger','chao','hanamaru']]],
+ '2026-11-28':[['점심',['omen','ino','hafuu','smart','izuu']],['저녁',['roku','omen','ino','hafuu','izuu']]],
+ '2026-11-29':[['아침',['yamamoto','smart','inoda','petit','walden']],['점심',['yoshimura','hirokawa','shoraian','saganoyu','omen']],['저녁',['omen','roku','ino','hafuu','izuu']]],
+ '2026-11-30':[['아침',['yamamoto','smart','inoda','petit','walden']],['점심',['omen','ino','hafuu','smart','izuu']],['저녁',['mizuno','fukutaro','imai','ippo','hide']]],
+ '2026-12-01':[['점심',['ajinoya','mizuno','imai','ippo','joroku']],['저녁',['ajinoya','fukutaro','imai','joroku','hide']]]
+};
+const D=[
+{id:'2026-11-25',label:'11/25 수',city:'도쿄',color:'#147b89',title:'인천에서 도쿄로',intro:'입국일은 도쿄역 주변만 가볍게 둘러봅니다.',stay:'karaksa hotel colors Tokyo Yaesu',events:[
+['06:50','인천공항 제1터미널 도착 목표','출발 3시간 전 여유','base','인천국제공항 제1터미널'],['09:50','파라타항공 WE0501 출발','인천 T1 → 나리타 T2 · A332','flight',''],['12:05','나리타 제2터미널 도착','입국·수하물에 약 90분 확보','flight','成田空港 第2ターミナル'],['13:40','N’EX로 도쿄역 이동','대기·승차·역내 이동 포함 약 90분','move','東京駅'],['15:15','호텔 이동·짐 맡기기','도쿄역 야에스 방면 도보 약 20분','move','karaksa hotel colors Tokyo Yaesu'],['15:40','늦은 점심','식당 탭에서 5곳 선택','meal',''],['16:30','호텔 휴식','','base',''],['17:30','도쿄역·마루노우치 산책','피곤하면 생략','option','東京駅 丸の内'],['18:30','저녁','도쿄역·니혼바시 권역','meal',''],['20:00','호텔 복귀','','base','']],transport:'나리타 T2 입국장 → Railways/JR 표지판 → 공항 제2빌딩역에서 도쿄역행 N’EX 지정석 구매 → 도쿄역 하차 → Yaesu/八重洲 표지판 → 호텔. 항공 지연을 고려해 N’EX는 입국 후 구매하는 계획입니다.',rain:'도쿄역 실내 시설에서 식사·휴식'},
+{id:'2026-11-26',label:'11/26 목',city:'도쿄',color:'#147b89',title:'아사쿠사와 스카이트리',intro:'첫 일본 여행에서 에도 분위기를 느끼는 날입니다.',stay:'karaksa hotel colors Tokyo Yaesu',events:[
+['08:45','호텔 조식','조식 이용 여부 확인 필요','meal',''],['09:45','긴자선으로 아사쿠사','호텔→니혼바시역 도보 후 아사쿠사 방향 · 총 30–40분','move','浅草駅'],['10:20','가미나리몬·나카미세·센소지','약 1시간 40분 산책','base','浅草寺'],['12:00','점심','아사쿠사 후보 5곳','meal',''],['13:15','아사쿠사 골목·휴식','','base',''],['14:15','도부선으로 스카이트리','아사쿠사→도쿄스카이트리 한 정거장 · 총 20–30분','move','東京スカイツリー'],['14:45','소라마치·스카이트리','전망대는 선택','option','東京スカイツリー'],['16:30','아사쿠사 복귀','도부선 역방향 또는 택시','move','浅草駅'],['17:15','저녁','점심과 다른 종류 선택','meal',''],['18:30','긴자선으로 니혼바시','아사쿠사→니혼바시 · 호텔까지 약 45분','move','日本橋駅']],transport:'니혼바시역 → 도쿄메트로 긴자선 아사쿠사 방향 → 종점. 스카이트리 이동은 도부 아사쿠사역을 찾고 도쿄스카이트리역에서 내립니다. 귀로는 긴자선 시부야 방향을 타고 니혼바시에서 하차합니다.',rain:'센소지 야외 시간을 줄이고 소라마치 실내 관람 확대'},
+{id:'2026-11-27',label:'11/27 금',city:'도쿄',color:'#147b89',title:'메이지신궁과 시부야 야경',intro:'전망대와 쇼핑을 묶은 도쿄의 핵심 일정입니다.',stay:'karaksa hotel colors Tokyo Yaesu',events:[
+['08:45','호텔 조식','조식 이용 여부 확인 필요','meal',''],['09:45','JR로 하라주쿠','도쿄역→야마노테선 시나가와·시부야 방향 · 총 45–50분','move','原宿駅'],['10:35','메이지신궁','입구부터 본전까지 걷는 시간 포함','base','明治神宮'],['11:45','점심','하라주쿠·오모테산도 후보','meal',''],['13:15','하라주쿠·오모테산도','거리 구경과 선택 쇼핑','base','表参道'],['14:30','시부야로 이동','오모테산도→긴자선 한 정거장 · 총 약 30분','move','渋谷駅'],['15:30','시부야 스카이','예약 입장 · 밝은 전망에서 야경까지','base','SHIBUYA SKY'],['17:15','시부야 쇼핑','잡화·뷰티 코너는 관심에 따라','base','渋谷'],['18:30','저녁','시부야 또는 도쿄역 복귀 후','meal',''],['20:00','호텔 복귀','긴자선 시부야→니혼바시 · 약 40–45분','move','日本橋駅'],['21:00','신칸센·짐 준비','','base','']],transport:'호텔→도쿄역→JR 야마노테선 시나가와·시부야 방향→하라주쿠. 오모테산도에서 시부야는 긴자선 한 정거장. 귀로는 시부야에서 긴자선 아사쿠사 방향을 타고 니혼바시에 내립니다.',rain:'시부야 스카이 옥상 운영 여부 확인, 실내 쇼핑 시간 확대'},
+{id:'2026-11-28',label:'11/28 토',city:'교토',color:'#bc6843',title:'교토로 이동, 히가시야마',intro:'늦은 오후 기요미즈데라와 기온을 걷습니다.',stay:'Minn Gion Kamogawa',events:[
+['08:00','호텔 조식·체크아웃','','meal',''],['09:00','도쿄역 신칸센 개찰구','승강장에 출발 25–30분 전 도착 목표','move','東京駅'],['10:00경','노조미로 교토','지정석 예약 전 계획 · 승차 약 2시간 15분','move','京都駅'],['12:15경','교토역 도착','','base',''],['12:15','택시로 숙소','대기·정체 포함 약 35–55분','move','Minn Gion Kamogawa'],['13:10','짐 보관 확인','체크인 전 가능 여부 미확인','base',''],['13:30','점심','산조·기온·시조 후보','meal',''],['15:15','니넨자카·산넨자카','야사카탑 주변부터 산책','base','二年坂'],['16:30','기요미즈데라','2026 가을 야간 관람 · 현장 입장','base','清水寺'],['18:15','기온으로 이동','언덕길 도보 35–45분','move','祇園'],['19:00','저녁','기온·시조 권역','meal',''],['20:15','기온 시라카와','피곤하면 숙소 복귀','option','祇園白川']],transport:'도쿄역에서 東海道・山陽新幹線 표지판 → 예약한 노조미의 열차 번호·시각·호차 확인 → 교토 하차. 교토역에서 택시로 Minn Gion Kamogawa 이동. 숙소는 기온시조보다 산조역 쪽입니다.',rain:'산넨자카 도보를 줄이고 기요미즈데라 중심으로 관람'},
+{id:'2026-11-29',label:'11/29 일',city:'교토',color:'#bc6843',title:'아라시야마 단풍',intro:'금각사·에이칸도는 컨디션을 보고 선택합니다.',stay:'Minn Gion Kamogawa',events:[
+['09:00','카페 아침','5곳 중 선택','meal',''],['09:45','아라시야마 이동','도자이선+란덴 · 총 65–80분','move','嵐山駅'],['11:00','덴류지 정원','','base','天龍寺'],['12:00','대나무숲','혼잡을 감안해 여유 있게','base','嵐山 竹林の小径'],['12:40','점심','아라시야마 후보','meal',''],['14:00','도게츠교','','base','渡月橋'],['14:25','금각사 이동','택시 약 35–55분 · 지연 시 생략','option','金閣寺'],['15:20','금각사','선택 관람','option','金閣寺'],['16:10','호텔 복귀·휴식','택시 약 30–50분','base',''],['18:00','저녁','','meal',''],['19:00','에이칸도로 이동','택시 약 15–30분','option','永観堂'],['19:30','에이칸도 야간 단풍','선택 관람 · 현장 구매','option','永観堂']],transport:'숙소→산조케이한역→도자이선 우즈마사텐진가와 방향→종점에서 지상으로 나와 란덴텐진가와 정류장→란덴 아라시야마 방향→종점. 금각사는 아라시야마에서 택시 이동이 편하지만 단풍철 정체를 예상합니다.',rain:'사가노유 식사·휴식. 금각사 또는 야간 관람 생략'},
+{id:'2026-11-30',label:'11/30 월',city:'오사카',color:'#805676',title:'교토 남부를 보고 오사카로',intro:'후시미이나리를 기본으로, 도후쿠지는 현장 선택입니다.',stay:'Cross Hotel Osaka',events:[
+['08:45','카페 아침','','meal',''],['09:30','체크아웃·짐 보관','체크아웃 후 보관 가능 여부 확인','base',''],['10:00','게이한선으로 이동','산조→후시미이나리 · 총 약 35분','move','伏見稲荷駅'],['10:35','후시미이나리','정상 등산 없이 본전·센본도리이','base','伏見稲荷大社'],['12:05','도후쿠지 단풍','대기·피로 시 생략','option','東福寺'],['13:05','산조 쪽으로 복귀','택시 약 20–35분','move','三条駅 京都'],['13:40','점심','늦은 시간 영업 여부 확인','meal',''],['14:40','짐 회수','','base',''],['15:30','게이한 특급→오사카 메트로','호텔까지 총 약 90–110분','move','なんば駅'],['17:15','오사카 호텔 체크인·휴식','','base','Cross Hotel Osaka'],['18:15','저녁','난바 후보','meal',''],['19:30','도톤보리·호젠지요코초','','base','道頓堀']],transport:'게이한 산조역에서 오사카 방면 보통·준급 중 후시미이나리에 정차하는 열차를 확인하세요. 오사카 이동은 게이한 산조→요도야바시행 특급→지하철 미도스지선 나카모즈·덴노지 방향→난바→호텔입니다.',rain:'도후쿠지 생략. 대체 오전은 은각사·철학의 길·난젠지 중 일부를 묶되 후시미이나리와 교체'},
+{id:'2026-12-01',label:'12/1 화',city:'오사카',color:'#805676',title:'난바 중심의 자유로운 하루',intro:'오사카성 공원은 단풍을 더 보고 싶을 때만 추가합니다.',stay:'Cross Hotel Osaka',events:[
+['09:00','호텔 조식','조식 이용 여부 확인 필요','meal',''],['10:00','오사카성 공원 이동','지하철 약 35–45분','option','大阪城公園'],['10:40','오사카성 공원 단풍','선택 · 천수각 내부 생략 가능','option','大阪城公園'],['12:10','난바 복귀','지하철 약 40분','move','なんば駅'],['13:00','점심','난바 후보 5곳','meal',''],['14:00','난바·신사이바시','쇼핑·선물·카페','base','心斎橋筋商店街'],['16:30','호텔 휴식','','base',''],['17:30','저녁','난바 후보 5곳','meal',''],['19:00','도톤보리 산책','선택','option','道頓堀'],['20:00','귀국 준비','라피트·항공 터미널 확인','base','']],transport:'오사카성 공원 선택 시 난바 미도스지선→혼마치에서 주오선 나가타 방향 환승→모리노미야 하차. 공원 산책 후 반대 방향으로 난바 복귀.',rain:'오사카성 공원 생략, 신사이바시 아케이드·백화점 실내 동선'},
+{id:'2026-12-02',label:'12/2 수',city:'귀국',color:'#805676',title:'간사이공항에서 인천으로',intro:'공항 제1터미널에 출발 약 3시간 전 도착하는 계획입니다.',stay:'귀국',events:[
+['06:30','호텔 조식 시간 확인','제공 시간에 맞지 않으면 간단히 식사','meal',''],['07:10','호텔 체크아웃','','base',''],['07:25','난카이 난바역으로','캐리어 도보·역내 이동 약 25분','move','南海なんば駅'],['08:00경','라피트 탑승','예약 전 계획 · 간사이공항행','move','関西国際空港'],['08:45경','간사이공항 제1터미널','항공사 카운터 확인','base','関西国際空港 第1ターミナル'],['09:00','체크인·출국 수속','항공사 마감 시간 재확인','base',''],['11:45','파라타항공 WE0512 출발','간사이 T1 → 인천 T1 · A320','flight',''],['13:45','인천 제1터미널 도착','입국·수하물 수령','flight','인천국제공항 제1터미널']],transport:'호텔→난카이 난바역(지하철 난바역과 다른 승강장)→예약한 라피트 호차·좌석 확인→간사이공항역→제1터미널. 승차권에 기본 운임 포함 여부 확인.',rain:'공항 이동 시간을 우선 확보'}
+];
+const todo=[
+['지금–10/14','항공편·호텔 예약증 확인','항공편은 제공된 정보 반영. 도쿄·오사카 조식 포함 여부와 호텔 예약 상태 확인'],
+['지금–10/14','교토 숙소 짐 보관 문의','11/28 체크인 전, 11/30 체크아웃 후 보관 가능 여부'],
+['지금–10/14','신칸센 수하물 크기 측정','캐리어 세 변 합 160cm 초과 시 해당 공간 포함 좌석 확인'],
+['10/28','11/28 도쿄→교토 노조미 좌석 예약·확인','성인 3명, 오전 10시 전후 출발 계획'],
+['11/2','12/2 난카이 난바→간사이공항 라피트 예약','오전 8시 전후 열차 계획'],
+['11/12–13','11/27 시부야 스카이 예약','15:30–16:00 입장 목표, 판매 시작 시각 확인'],
+['11/18','식당 예약·휴무·호텔 안내 확인','히로카와 등 선택한 예약제 식당 우선'],
+['11/22','날씨와 단풍 상태 확인','금각사·에이칸도·도후쿠지 선택 결정'],
+['11/24','승차권·예약 자료 저장','QR·호텔 주소를 가족에게 공유, 항공사 수하물 규정 확인'],
+['12/1','귀국 준비','라피트·간사이공항 T1·항공사 체크인 마감 확인']
+];
+const H=[
+['도쿄','karaksa hotel colors Tokyo Yaesu','東京駅 八重洲','11/25–11/28','앞선 일정에 기록된 숙소. 예약증·조식 포함 여부 미확인.'],
+['교토','Minn Gion Kamogawa','Minn 祇園鴨川','11/28–11/30','사용자가 확인한 숙소. 산조역 쪽 위치, 체크인 전후 짐 보관 여부 미확인.'],
+['오사카','Cross Hotel Osaka','クロスホテル大阪','11/30–12/2','앞선 일정에 기록된 숙소. 예약증·조식 포함 여부 미확인.']
+];
+const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const maps=q=>'https://www.google.com/maps/search/?api=1&query='+encodeURIComponent(q);
+let current=0;
+function attrLink(q,label){return q?'<a href="'+maps(q)+'" target="_blank" rel="noopener noreferrer">'+label+'</a>':''}
+function mealCard(id,city){const r=R[id],p=photo[r[6]],url=p?'https://commons.wikimedia.org/wiki/Special:FilePath/'+encodeURIComponent(p.file)+'?width=420':'',filepage=p?'https://commons.wikimedia.org/wiki/File:'+encodeURIComponent(p.file):'';return '<article class="food"><div class="foodmedia">'+(p?'<img loading="lazy" src="'+url+'" alt="'+esc(r[2])+' 참고 사진">':'<span class="fallback" aria-hidden="true">🍽</span>')+'</div><div class="foodbody"><strong>'+esc(r[0])+'</strong><span class="jp" lang="ja">'+esc(r[1])+'</span><span class="meta">'+esc(r[2])+' · '+esc(r[3])+'</span><span class="meta">타베로그 '+esc(r[4])+'</span><span class="notes">'+esc(r[7])+'</span><div class="foodlinks"><a href="'+r[5]+'" target="_blank" rel="noopener noreferrer">타베로그</a><a href="'+maps(r[1]+' '+city)+'" target="_blank" rel="noopener noreferrer">Google Maps</a></div>'+(p?'<div class="credit">음식 참고 사진 · 실제 식당 메뉴 아님 · <a href="'+filepage+'" target="_blank" rel="noopener noreferrer">'+esc(p.author)+'</a> · <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener noreferrer">CC BY-SA 4.0</a> · 카드에 맞춰 자름</div>':'')+'</div></article>'}
+function render(){
+ const d=D[current],accent='style="--accent:'+d.color+'"';
+ document.getElementById('dates').innerHTML=D.map((x,i)=>'<button type="button" data-day="'+i+'" aria-current="'+(i===current)+'">'+x.label+' · '+x.city+'</button>').join('');
+ document.getElementById('schedule').innerHTML='<div class="panel" '+accent+'><div class="dayhead"><div class="city">'+d.city+' · '+d.label+'</div><h2>'+esc(d.title)+'</h2><p>'+esc(d.intro)+'</p><div class="badges"><span class="badge">기본 일정</span><span class="badge option">◇ 현장 선택</span><span class="badge hotel">숙소 · '+esc(d.stay)+'</span></div></div></div><div class="panel" '+accent+'><div class="panelpad"><h3>시간별 일정</h3><div class="timeline">'+d.events.map(e=>'<div class="event"><time>'+esc(e[0])+'</time><div class="eventbody '+(e[3]==='option'?'option':'')+'"><strong>'+(e[3]==='option'?'◇ ':'')+esc(e[1])+'</strong><small>'+esc(e[2])+'</small>'+attrLink(e[4],'Google Maps ↗')+'</div></div>').join('')+'</div></div></div><div class="panel"><div class="panelpad"><h3>이동 방법</h3><p class="muted">'+esc(d.transport)+'</p><div class="note">비·혼잡 대안: '+esc(d.rain)+'</div></div></div>';
+ const ml=meals[d.id]||[];
+ document.getElementById('foodview').innerHTML='<div class="panel"><div class="panelpad"><h3>'+d.label+' 식사 후보</h3><p class="hint">각 끼니에서 5곳 중 1곳을 고르세요. 점수·리뷰어 수는 2026년 10월 확인 자료이며 영업시간·가격은 방문 전 재확인이 필요합니다. 음식 사진은 실제 식당 사진이 아닌 참고 이미지입니다. 실제 식당 사진은 Google Maps 링크에서 확인하세요. 같은 후보가 여러 끼니에 반복될 수 있으며 위치·영업시간은 선택 전에 꼭 확인하세요.</p>'+(!ml.length?'<div class="note">귀국일은 호텔 조식 또는 간단한 아침을 계획했습니다. 이용 가능 시간은 호텔에서 확인해 주세요.</div>':ml.map(m=>'<div class="meal"><h4>'+esc(m[0])+' · 5곳</h4><div class="foodgrid">'+m[1].map(id=>mealCard(id,d.city)).join('')+'</div></div>').join(''))+'</div></div>';
+ document.getElementById('transitview').innerHTML='<div class="panel"><div class="panelpad"><h3>'+d.label+' 교통 안내</h3><p>'+esc(d.transport)+'</p><div class="note">열차 시각·승강장은 예약증과 당일 역 전광판이 기준입니다. 일반 지하철 교통카드와 특급·신칸센 지정석 승차권을 구분해 준비하세요.</div></div></div><div class="panel"><div class="panelpad"><h3>주요 도시 간 이동</h3><details><summary>나리타 → 도쿄</summary><ol><li>나리타 T2에서 Railways/JR 표지판 확인</li><li>공항 제2빌딩역에서 N’EX 도쿄역행 지정석 구매</li><li>도쿄역에서 Yaesu/八重洲 표지판을 따라 호텔로 이동</li></ol></details><details><summary>도쿄 → 교토</summary><ol><li>도쿄역 東海道・山陽新幹線 개찰구 찾기</li><li>예약한 노조미 열차 번호·시각·호차 확인</li><li>교토역에서 택시로 Minn Gion Kamogawa 이동</li></ol></details><details><summary>교토 → 오사카</summary><ol><li>게이한 산조역에서 요도야바시행 특급</li><li>요도야바시에서 오사카 메트로 미도스지선 환승</li><li>나카모즈·덴노지 방향으로 난바 하차, 호텔 이동</li></ol></details><details><summary>오사카 → 간사이공항</summary><ol><li>지하철 난바역이 아닌 난카이 난바역으로 이동</li><li>예약한 라피트의 열차·호차·좌석 확인</li><li>간사이공항역에서 제1터미널로 이동</li></ol></details></div></div>';
+ document.getElementById('hotelsview').innerHTML='<div class="panel"><div class="panelpad"><h3>숙소 3곳</h3>'+H.map(h=>'<div class="meal"><strong>'+esc(h[0])+' · '+esc(h[3])+'</strong><p class="stay">'+esc(h[1])+'</p><p class="muted">'+esc(h[4])+'</p><a class="pill" href="'+maps(h[2])+'" target="_blank" rel="noopener noreferrer">Google Maps 열기 ↗</a></div>').join('')+'</div></div>';
+ document.getElementById('checkview').innerHTML='<div class="panel"><div class="panelpad"><h3>출발 전 준비</h3><p class="hint">체크 상태는 이 기기에만 저장됩니다.</p>'+todo.map((t,i)=>'<div class="check"><input type="checkbox" id="t'+i+'" data-todo="'+i+'" '+(localStorage.getItem('tripTodo'+i)==='1'?'checked':'')+'><label for="t'+i+'"><strong>'+esc(t[0])+' · '+esc(t[1])+'</strong><small>'+esc(t[2])+'</small></label></div>').join('')+'</div></div>';
+ document.querySelectorAll('#dates button').forEach(b=>b.addEventListener('click',()=>{current=Number(b.dataset.day);render();window.scrollTo(0,0)}));
+ document.querySelectorAll('[data-todo]').forEach(c=>c.addEventListener('change',()=>localStorage.setItem('tripTodo'+c.dataset.todo,c.checked?'1':'0')));
+}
+render();
+document.querySelectorAll('.bottom button').forEach(b=>b.addEventListener('click',()=>{document.querySelectorAll('.bottom button').forEach(x=>x.setAttribute('aria-current',x===b?'true':'false'));document.querySelectorAll('.view').forEach(v=>v.classList.toggle('active',v.id===b.dataset.view));window.scrollTo(0,0)}));
+let deferredPrompt;window.addEventListener('beforeinstallprompt',e=>{e.preventDefault();deferredPrompt=e;document.getElementById('install').hidden=false});document.getElementById('install').addEventListener('click',async()=>{if(deferredPrompt){deferredPrompt.prompt();await deferredPrompt.userChoice;deferredPrompt=null;document.getElementById('install').hidden=true}});
+if('serviceWorker'in navigator){window.addEventListener('load',()=>navigator.serviceWorker.register('./sw.js').catch(()=>{}))}
+</script>
+</body>
+</html>
