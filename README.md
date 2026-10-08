@@ -17,4 +17,4 @@
 
 `main` 브랜치의 `/docs` 폴더에서 게시합니다.
 
-사이트: https://minw428.github.io/codex/
+사이트: https://minw428.github.io/japan-trip/
