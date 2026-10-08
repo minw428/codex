@@ -1,5 +1,5 @@
-const CACHE='japan-trip-2026-v2';
-const SHELL=['./','./index.html','./manifest.webmanifest','./icon.svg','./icon-192.png','./icon-512.png','./food-atlas.png','./day-atlas.png'];
+const CACHE='japan-trip-2026-v3';
+const SHELL=['./','./index.html','./manifest.webmanifest','./icon.svg','./icon-192.png','./icon-512.png','./food-illustrations.png','./day-atlas.png'];
 self.addEventListener('install',event=>{
   event.waitUntil(caches.open(CACHE).then(cache=>cache.addAll(SHELL)).then(()=>self.skipWaiting()));
 });
