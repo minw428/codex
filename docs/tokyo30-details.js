@@ -121,3 +121,23 @@ const tokyo30Photos={
 for(const [id,[page,alt]] of Object.entries(tokyo30Photos)){
  Object.assign(tokyo30Details[id],{photo:'./tokyo30-photos/'+id+'.jpg',photoPage:page,photoAlt:alt});
 }
+// Direct excerpts: wording preserved, only PDF spacing/line breaks normalized.
+// Scores are the author's personal ratings, never Tabelog scores.
+const tokyo30Voices={
+ tsujihan:{page:10,score:'9.8',text:'기가막히게 부드럽고 엄청난 감칠맛이다. 세상이 다 내꺼다.'},
+ kaneko:{page:13,score:'9.7',text:'이게 이런가격에? 하는 느낌의 비주얼이 나옴. 여기서부터 흥분.'},
+ bairin:{page:26,score:'9.5',text:'줄을 설 만큼 돈까스의 맛에 자신감이 있는가? YES\n한국의 바이린과 차이가 나는가? YES\n무조건 맛있는가? YES'},
+ katsukami2:{page:37,score:'9.9',text:'그리고 첫 점을 받았는데 와우 이건 미쳤다\n모든 돈까스 코스를 일일히 다 설명하기 어려움. 솔직히 전부 다 맛있었고 어나더레벨이었음.'},
+ hikiniku:{page:45,score:'9.6',text:'이집은 하얀쌀밥에 함바그 땡기시면 무조건 예약 가보시길 추천'},
+ toritake:{page:52,score:'9.1',text:'시오냐 타레냐 난 타레'},
+ newtorigin:{page:56,score:'9.3',text:'솥밥세개먹기 (미니솥밥이니까) 무조건 뉴토리긴 훨맛있음'},
+ kyubey:{page:69,score:'9.9',text:'몇몇점들은 지금껏 먹어봤던 스시들중 단연 최고.'},
+ misaki:{page:73,score:'8.9',text:'그래서 이집은 원없이 배불리 먹고싶을때 막 감동하면서는 아니고 그냥 스시가 고플때 대기없이 들어갈 스시잔마이의 대체가 될 그런 스시가게.'},
+ moheji:{page:76,score:'9.6',text:'아주그냥 완전 전문가들이 몬자야끼를 예술로 만들어준다. 그래서 이걸 먹다보면 어느새 완전 중독된 나를 발견하게 됨.'},
+ bazoku:{page:82,score:'9.4',text:'하지만 나는 결단코! 이집은 마파두부라멘때문에 들러야 할 곳이라는 생각이다. 그만큼 맛있다.'},
+ ginzatei:{page:88,score:'9.2',text:'이상하리 요즘 자주가서 결국 다섯번쯤 가게된 집. 가면 갈수록 이집의 진가를 알게된다.'},
+ sama:{page:101,score:'9.3',text:'개인적으로는 솔직히 좀 놀랐다. 또잉~ 이런 느낌으로 맛있잖아?'},
+ bincho:{page:111,score:'9.5',text:'나는 개인적으로 3단계를 무척 좋아하는데 이게 전혀 비리거나 그렇지 않다. 깊은 맛.'},
+ poppy:{page:120,score:'9.2',text:'이걸 노포에서 맛볼 수 있다니. 그 분위기와 맛에서 모두 좋은 점수를 주고싶은 집이다.'}
+};
+for(const [id,voice] of Object.entries(tokyo30Voices))tokyo30Details[id].voice=voice;

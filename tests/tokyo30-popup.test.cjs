@@ -98,10 +98,10 @@ test('all source text is escaped and summaries are part of the offline shell',()
  const shell=JSON.parse(vm.runInNewContext(sw.slice(0,sw.indexOf('self.addEventListener'))+'JSON.stringify(SHELL)'));
  assert.ok(shell.includes('./tokyo30-details.js'));
  for(const file of shell)assert.ok(fs.existsSync(path.join(docs,file.split('?')[0])),file);
- assert.ok(sw.includes('v10-tokyo30-photo-refresh'));
+ assert.ok(sw.includes('v11-tokyo30-author-voice'));
  const html=fs.readFileSync(path.join(docs,'index.html'),'utf8');
- assert.ok(html.includes('src="./tokyo30-details.js?v=20261009-photos-2"'));
- assert.ok(shell.includes('./tokyo30-details.js?v=20261009-photos-2'));
+ assert.ok(html.includes('src="./tokyo30-details.js?v=20261009-author-voice"'));
+ assert.ok(shell.includes('./tokyo30-details.js?v=20261009-author-voice'));
  assert.ok(sw.includes("request.destination==='script'"));
  assert.ok(sw.includes("fetch(request,{cache:'no-cache'})"));
 });
@@ -124,4 +124,22 @@ test('each source popup shows exactly one real PDF photo, including the branch w
  }
  assert.equal(paths.size,15);
  assert.ok(a.run("restaurantSummaryHTML('hikiniku')").includes('기치조지점 사진 (일정은 시부야점)'));
+});
+
+test('all 15 original author excerpts are emphasized immediately after the photo',()=>{
+ const a=app();
+ for(const id of a.run('[...tokyo30Recommended]')){
+  const detail=a.run(`tokyo30Details[${JSON.stringify(id)}]`);
+  assert.ok(detail.voice.text&&detail.voice.page&&detail.voice.score,id);
+  const html=a.run(`restaurantSummaryHTML(${JSON.stringify(id)})`);
+  assert.ok(html.indexOf('restaurant-author-voice')>html.indexOf('restaurant-source-photo'));
+  assert.ok(html.indexOf('restaurant-author-voice')<html.indexOf('<div class="note">'));
+  assert.ok(html.includes('<blockquote>'));
+  assert.ok(html.includes('저자의 한마디 · 원문 발췌'));
+  assert.ok(html.includes('타베로그 점수 아님'));
+ }
+ assert.ok(a.run("restaurantSummaryHTML('misaki')").includes('막 감동하면서는 아니고'));
+ assert.ok(a.run("restaurantSummaryHTML('hikiniku')").includes('기치조지점 방문 감상'));
+ a.run("tokyo30Details.sama.voice.text='<script>alert(1)</script>'");
+ assert.ok(a.run("restaurantSummaryHTML('sama')").includes('&lt;script&gt;'));
 });
