@@ -97,8 +97,13 @@ test('all source text is escaped and summaries are part of the offline shell',()
  new vm.Script(sw);
  const shell=JSON.parse(vm.runInNewContext(sw.slice(0,sw.indexOf('self.addEventListener'))+'JSON.stringify(SHELL)'));
  assert.ok(shell.includes('./tokyo30-details.js'));
- for(const file of shell)assert.ok(fs.existsSync(path.join(docs,file)),file);
- assert.ok(sw.includes('v9-tokyo30-photos'));
+ for(const file of shell)assert.ok(fs.existsSync(path.join(docs,file.split('?')[0])),file);
+ assert.ok(sw.includes('v10-tokyo30-photo-refresh'));
+ const html=fs.readFileSync(path.join(docs,'index.html'),'utf8');
+ assert.ok(html.includes('src="./tokyo30-details.js?v=20261009-photos-2"'));
+ assert.ok(shell.includes('./tokyo30-details.js?v=20261009-photos-2'));
+ assert.ok(sw.includes("request.destination==='script'"));
+ assert.ok(sw.includes("fetch(request,{cache:'no-cache'})"));
 });
 
 test('each source popup shows exactly one real PDF photo, including the branch warning',()=>{

@@ -1,6 +1,7 @@
-const CACHE='japan-trip-2026-v9-tokyo30-photos';
+const CACHE='japan-trip-2026-v10-tokyo30-photo-refresh';
 const SHELL=['./','./index.html','./tokyo30-details.js','./manifest.webmanifest','./icon.svg','./icon-192.png','./icon-512.png','./food-illustrations.png','./tokyo30-food-illustrations.png','./day-atlas.png','./grill-grand-steak.jpg'];
 SHELL.push(...['tsujihan','kaneko','bairin','katsukami2','hikiniku','toritake','newtorigin','kyubey','misaki','moheji','bazoku','ginzatei','sama','bincho','poppy'].map(id=>'./tokyo30-photos/'+id+'.jpg'));
+SHELL.push('./tokyo30-details.js?v=20261009-photos-2');
 self.addEventListener('install',event=>{
   event.waitUntil(caches.open(CACHE).then(cache=>cache.addAll(SHELL)).then(()=>self.skipWaiting()));
 });
@@ -10,11 +11,12 @@ self.addEventListener('activate',event=>{
 self.addEventListener('fetch',event=>{
   const request=event.request;
   if(request.method!=='GET'||new URL(request.url).origin!==self.location.origin)return;
-  if(request.mode==='navigate'){
-    event.respondWith(fetch(request).then(response=>{
-      if(response.ok){const copy=response.clone();caches.open(CACHE).then(cache=>cache.put('./index.html',copy))}
+  // HTML and executable assets must not mix fresh markup with old cached data.
+  if(request.mode==='navigate'||request.destination==='script'||request.destination==='style'){
+    event.respondWith(fetch(request,{cache:'no-cache'}).then(response=>{
+      if(response.ok){const copy=response.clone();caches.open(CACHE).then(cache=>cache.put(request.mode==='navigate'?'./index.html':request,copy))}
       return response;
-    }).catch(()=>caches.match('./index.html')));
+    }).catch(()=>caches.match(request.mode==='navigate'?'./index.html':request)));
     return;
   }
   event.respondWith(caches.match(request).then(cached=>cached||fetch(request).then(response=>{

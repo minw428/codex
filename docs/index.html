@@ -123,7 +123,7 @@ body.restaurant-modal-open{overflow:hidden}
 <header class="restaurant-detail-head"><div><span class="kicker">도쿄 30끼 추천 · 자료 요약</span><h2 id="restaurant-detail-title"></h2><span id="restaurant-detail-jp" class="jp" lang="ja"></span><p id="restaurant-detail-source"></p></div><button type="button" id="restaurant-detail-close" class="restaurant-close" autofocus>닫기 ✕</button></header>
 <div id="restaurant-detail-body" class="restaurant-detail-body"></div>
 </dialog>
-<script src="./tokyo30-details.js"></script>
+<script src="./tokyo30-details.js?v=20261009-photos-2"></script>
 <script>
 'use strict';
 const foodCell={
@@ -402,7 +402,7 @@ render();
 document.querySelectorAll('.bottom button').forEach(b=>b.addEventListener('click',()=>{document.querySelectorAll('.bottom button').forEach(x=>x.setAttribute('aria-current',x===b?'true':'false'));document.querySelectorAll('.view').forEach(v=>v.classList.toggle('active',v.id===b.dataset.view));window.scrollTo(0,0);requestAnimationFrame(()=>{applyAtlas();if(b.dataset.view==='transitview')initTripMap()})}));
 window.addEventListener('resize',()=>requestAnimationFrame(applyAtlas));
 let deferredPrompt;window.addEventListener('beforeinstallprompt',e=>{e.preventDefault();deferredPrompt=e;document.getElementById('install').hidden=false});document.getElementById('install').addEventListener('click',async()=>{if(deferredPrompt){deferredPrompt.prompt();await deferredPrompt.userChoice;deferredPrompt=null;document.getElementById('install').hidden=true}});
-if('serviceWorker'in navigator){window.addEventListener('load',()=>navigator.serviceWorker.register('./sw.js').catch(()=>{}))}
+if('serviceWorker'in navigator){window.addEventListener('load',()=>navigator.serviceWorker.register('./sw.js',{updateViaCache:'none'}).then(registration=>registration.update().catch(()=>{})).catch(()=>{}))}
 </script>
 </body>
 </html>
