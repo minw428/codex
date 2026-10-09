@@ -98,7 +98,7 @@ test('all source text is escaped and summaries are part of the offline shell',()
  const shell=JSON.parse(vm.runInNewContext(sw.slice(0,sw.indexOf('self.addEventListener'))+'JSON.stringify(SHELL)'));
  assert.ok(shell.includes('./tokyo30-details.js'));
  for(const file of shell)assert.ok(fs.existsSync(path.join(docs,file.split('?')[0])),file);
- assert.ok(sw.includes('v12-tokyo30-recommendation-reasons'));
+ assert.ok(sw.includes('v13-nov25-confirmed-dinner'));
  const html=fs.readFileSync(path.join(docs,'index.html'),'utf8');
  assert.ok(html.includes('src="./tokyo30-details.js?v=20261009-recommendation-reasons"'));
  assert.ok(shell.includes('./tokyo30-details.js?v=20261009-recommendation-reasons'));
@@ -124,6 +124,25 @@ test('each source popup shows exactly one real PDF photo, including the branch w
  }
  assert.equal(paths.size,15);
  assert.ok(a.run("restaurantSummaryHTML('hikiniku')").includes('기치조지점 사진 (일정은 시부야점)'));
+});
+
+test('Nov 25 confirmed dinner is at 18:00 and the timeline, transport and map agree',()=>{
+ const a=app(),day=a.run('D[0]'),transit=a.run('T[0]'),map=a.run('dayMaps[0]');
+ const booked=day.events.find(e=>e[1].includes('예약 완료'));
+ assert.equal(booked[0],'18:00');
+ assert.ok(booked[1].includes('긴자 카츠카미 니'));
+ assert.ok(day.events.some(e=>e[0]==='17:45'));
+ assert.ok(day.events.some(e=>e[0]==='17:05'));
+ assert.equal(day.events.some(e=>e[0]==='18:30'&&e[1]==='저녁'),false);
+ assert.ok(day.intro.includes('18:00 예약 완료'));
+ assert.ok(transit.routes.some(r=>r.title==='호텔 → 긴자 카츠카미 니'&&r.tip.includes('18:00')));
+ assert.ok(transit.routes.some(r=>r.title.includes('마루노우치')&&r.optional));
+ assert.ok(map.points.some(p=>p.name.includes('18:00 예약')));
+ assert.ok(map.segments.some(p=>p[0]===2&&p[1]===3));
+ assert.ok(map.segments.some(p=>p[0]===3&&p[1]===2));
+ assert.ok(a.get('schedule').innerHTML.includes('예약 완료 · 긴자 카츠카미 니'));
+ assert.ok(a.get('transitview').innerHTML.includes('17:45'));
+ assert.ok(a.get('foodview').innerHTML.includes('저녁 확정: 긴자 카츠카미 니 · 18:00'));
 });
 
 test('all 15 source-grounded recommendation reasons are emphasized after the photo',()=>{

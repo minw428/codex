@@ -1,4 +1,4 @@
-const CACHE='japan-trip-2026-v12-tokyo30-recommendation-reasons';
+const CACHE='japan-trip-2026-v13-nov25-confirmed-dinner';
 const SHELL=['./','./index.html','./tokyo30-details.js','./manifest.webmanifest','./icon.svg','./icon-192.png','./icon-512.png','./food-illustrations.png','./tokyo30-food-illustrations.png','./day-atlas.png','./grill-grand-steak.jpg'];
 SHELL.push(...['tsujihan','kaneko','bairin','katsukami2','hikiniku','toritake','newtorigin','kyubey','misaki','moheji','bazoku','ginzatei','sama','bincho','poppy'].map(id=>'./tokyo30-photos/'+id+'.jpg'));
 SHELL.push('./tokyo30-details.js?v=20261009-recommendation-reasons');
