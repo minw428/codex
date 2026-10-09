@@ -108,3 +108,16 @@ const tokyo30Details={
   payment:'현금·카드 여부는 자료에 미기재.',
   caution:'자료의 토요일 한정 영업 설명과 앞서 확인한 평일 영업 안내가 다릅니다. 스미다강 건너 혼조 지점의 당일 영업을 확인하고 방문하세요.'}
 };
+// One photograph extracted from the supplied PDF for each source recommendation.
+const tokyo30Photos={
+ tsujihan:[7,'해산물 덮밥이 놓인 카운터'],kaneko:[11,'튀김을 올린 텐동'],
+ bairin:[25,'돈카츠 덮밥'],katsukami2:[35,'돈카츠 샌드 메뉴'],
+ hikiniku:[42,'기치조지점에서 굽는 함박스테이크'],toritake:[49,'닭꼬치 구이'],
+ newtorigin:[54,'솥밥'],kyubey:[66,'참치 초밥'],misaki:[72,'닭고기 달걀 덮밥'],
+ moheji:[74,'철판에서 조리하는 몬자야키'],bazoku:[81,'탄탄면'],
+ ginzatei:[87,'차슈를 올린 라멘'],sama:[100,'채소와 고기를 담은 수프카레'],
+ bincho:[109,'장어 덮밥'],poppy:[119,'함박스테이크 식사']
+};
+for(const [id,[page,alt]] of Object.entries(tokyo30Photos)){
+ Object.assign(tokyo30Details[id],{photo:'./tokyo30-photos/'+id+'.jpg',photoPage:page,photoAlt:alt});
+}

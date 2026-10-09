@@ -1,5 +1,6 @@
-const CACHE='japan-trip-2026-v8-tokyo30-details';
+const CACHE='japan-trip-2026-v9-tokyo30-photos';
 const SHELL=['./','./index.html','./tokyo30-details.js','./manifest.webmanifest','./icon.svg','./icon-192.png','./icon-512.png','./food-illustrations.png','./tokyo30-food-illustrations.png','./day-atlas.png','./grill-grand-steak.jpg'];
+SHELL.push(...['tsujihan','kaneko','bairin','katsukami2','hikiniku','toritake','newtorigin','kyubey','misaki','moheji','bazoku','ginzatei','sama','bincho','poppy'].map(id=>'./tokyo30-photos/'+id+'.jpg'));
 self.addEventListener('install',event=>{
   event.waitUntil(caches.open(CACHE).then(cache=>cache.addAll(SHELL)).then(()=>self.skipWaiting()));
 });

@@ -98,5 +98,25 @@ test('all source text is escaped and summaries are part of the offline shell',()
  const shell=JSON.parse(vm.runInNewContext(sw.slice(0,sw.indexOf('self.addEventListener'))+'JSON.stringify(SHELL)'));
  assert.ok(shell.includes('./tokyo30-details.js'));
  for(const file of shell)assert.ok(fs.existsSync(path.join(docs,file)),file);
- assert.ok(sw.includes('v8-tokyo30-details'));
+ assert.ok(sw.includes('v9-tokyo30-photos'));
+});
+
+test('each source popup shows exactly one real PDF photo, including the branch warning',()=>{
+ const a=app(),paths=new Set();
+ const sw=fs.readFileSync(path.join(docs,'sw.js'),'utf8');
+ const shell=JSON.parse(vm.runInNewContext(sw.slice(0,sw.indexOf('self.addEventListener'))+'JSON.stringify(SHELL)'));
+ for(const id of a.run('[...tokyo30Recommended]')){
+  const detail=a.run(`tokyo30Details[${JSON.stringify(id)}]`);
+  const html=a.run(`restaurantSummaryHTML(${JSON.stringify(id)})`);
+  assert.equal((html.match(/<img /g)||[]).length,1);
+  assert.ok(html.includes('src="'+detail.photo+'"'));
+  assert.ok(html.includes('도쿄 30끼 원문 사진 · '+detail.photoPage+'쪽'));
+  assert.ok(detail.photoAlt);
+  assert.ok(shell.includes(detail.photo));
+  const bytes=fs.readFileSync(path.join(docs,detail.photo));
+  assert.equal(bytes.readUInt16BE(0),0xffd8);
+  paths.add(detail.photo);
+ }
+ assert.equal(paths.size,15);
+ assert.ok(a.run("restaurantSummaryHTML('hikiniku')").includes('기치조지점 사진 (일정은 시부야점)'));
 });
