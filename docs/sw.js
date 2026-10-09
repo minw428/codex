@@ -1,5 +1,5 @@
-const CACHE='japan-trip-2026-v7-tokyo30';
-const SHELL=['./','./index.html','./manifest.webmanifest','./icon.svg','./icon-192.png','./icon-512.png','./food-illustrations.png','./tokyo30-food-illustrations.png','./day-atlas.png','./grill-grand-steak.jpg'];
+const CACHE='japan-trip-2026-v8-tokyo30-details';
+const SHELL=['./','./index.html','./tokyo30-details.js','./manifest.webmanifest','./icon.svg','./icon-192.png','./icon-512.png','./food-illustrations.png','./tokyo30-food-illustrations.png','./day-atlas.png','./grill-grand-steak.jpg'];
 self.addEventListener('install',event=>{
   event.waitUntil(caches.open(CACHE).then(cache=>cache.addAll(SHELL)).then(()=>self.skipWaiting()));
 });
